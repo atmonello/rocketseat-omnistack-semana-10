@@ -48,7 +48,32 @@ module.exports = {
   },
 
   async update(req, res) {
+    const { id } = req.params;
 
+    if (id.length !== 24) {
+      return res.status(400).json({ message: `ID ${id} is invalid` });
+    }
+
+    const { techs, github_username } = req.body;
+
+    if (github_username) {
+      return res.status(400).json({ message: 'The GitHub username cannot be edited' });
+    }
+
+    const update = { ...req.body };
+
+    if (techs) {
+      const techsArray = parseStringToArray(techs);
+      update.techs = techsArray;
+    }
+
+    const dev = await Dev.findByIdAndUpdate(id, update);
+
+    if (!dev) {
+      return res.status(400).json({ message: `Could not find dev by ID ${id}` });
+    }
+
+    return res.json({ dev });
   },
 
   async destroy(req, res) {
@@ -58,12 +83,12 @@ module.exports = {
       return res.status(400).json({ message: `ID ${id} is invalid` });
     }
 
-    const dev = await Dev.deleteOne({ _id: id });
+    const dev = await Dev.findByIdAndDelete(id);
 
-    if (dev) {
-      return res.status(204);
+    if (!dev) {
+      return res.status(400).json({ message: `Could not find dev by ID ${id}` });
     }
 
-    return res.status(400).json({ message: `Could not find dev by ID ${id}` });
+    return res.json({ message: `Dev with ID ${id} removed.` });
   },
 };
