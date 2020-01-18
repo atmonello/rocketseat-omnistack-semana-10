@@ -46,4 +46,24 @@ module.exports = {
     }
     return res.status(400).json({ message: `User ${github_username} already exists` });
   },
+
+  async update(req, res) {
+
+  },
+
+  async destroy(req, res) {
+    const { id } = req.params;
+
+    if (id.length !== 24) {
+      return res.status(400).json({ message: `ID ${id} is invalid` });
+    }
+
+    const dev = await Dev.deleteOne({ _id: id });
+
+    if (dev) {
+      return res.status(204);
+    }
+
+    return res.status(400).json({ message: `Could not find dev by ID ${id}` });
+  },
 };
