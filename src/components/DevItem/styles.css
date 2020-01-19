@@ -3,6 +3,9 @@ li.dev-item {
   box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.02);
   border-radius: 2px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 li.dev-item header {
@@ -15,6 +18,7 @@ li.dev-item header img {
   width: 54px;
   height: 54px;
   border-radius: 50%;
+  border: 1px solid #333;
 }
 
 li.dev-item header .user-info {
@@ -37,13 +41,14 @@ li.dev-item p {
   color: #666;
   font-size: 14px;
   line-height: 20px;
-  margin: 10px 0;
+  margin: 10px 0 auto;
 }
 
 li.dev-item a {
   color: #8e4dff;
   font-size: 14px;
   text-decoration: none;
+  margin: 10px 0 0;
 }
 
 li.dev-item a:hover {
