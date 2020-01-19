@@ -3,6 +3,7 @@ import React from 'react';
 import './global.css';
 import './App.css';
 import './Sidebar.css';
+import './Main.css'
 
 function App() {
   return (
@@ -35,7 +36,54 @@ function App() {
           <button type="submit">Salvar</button>
         </form>
       </aside>
-      <main></main>
+      <main>
+        <ul>
+          <li className="dev-item">
+            <header>
+              <img src="https://avatars0.githubusercontent.com/u/10872514?s=460&v=4" alt="André Monello"/>
+              <div className="user-info">
+                <strong>André Monello</strong>
+                <span>ReactJS, VueJS, Node.js</span>
+              </div>
+            </header>
+            <p>Front-end developer @r7com. Front-end, tech and startups. São Paulo, Brasil.</p>
+            <a href="https://github.com/atmonello">Acessar perfil no GitHub</a>
+          </li>
+          <li className="dev-item">
+            <header>
+              <img src="https://avatars0.githubusercontent.com/u/10872514?s=460&v=4" alt="André Monello"/>
+              <div className="user-info">
+                <strong>André Monello</strong>
+                <span>ReactJS, VueJS, Node.js</span>
+              </div>
+            </header>
+            <p>Front-end developer @r7com. Front-end, tech and startups. São Paulo, Brasil.</p>
+            <a href="https://github.com/atmonello">Acessar perfil no GitHub</a>
+          </li>
+          <li className="dev-item">
+            <header>
+              <img src="https://avatars0.githubusercontent.com/u/10872514?s=460&v=4" alt="André Monello"/>
+              <div className="user-info">
+                <strong>André Monello</strong>
+                <span>ReactJS, VueJS, Node.js</span>
+              </div>
+            </header>
+            <p>Front-end developer @r7com. Front-end, tech and startups. São Paulo, Brasil.</p>
+            <a href="https://github.com/atmonello">Acessar perfil no GitHub</a>
+          </li>
+          <li className="dev-item">
+            <header>
+              <img src="https://avatars0.githubusercontent.com/u/10872514?s=460&v=4" alt="André Monello"/>
+              <div className="user-info">
+                <strong>André Monello</strong>
+                <span>ReactJS, VueJS, Node.js</span>
+              </div>
+            </header>
+            <p>Front-end developer @r7com. Front-end, tech and startups. São Paulo, Brasil.</p>
+            <a href="https://github.com/atmonello">Acessar perfil no GitHub</a>
+          </li>
+        </ul>
+      </main>
     </div>
   );
 }
