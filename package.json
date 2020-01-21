@@ -16,7 +16,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "react-scripts build"
+    "deploy": "react-scripts build",
+    "deploy:netlify": "cd .. && git subtree push --prefix web origin web"
   },
   "eslintConfig": {
     "extends": "react-app"
