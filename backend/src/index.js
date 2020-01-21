@@ -23,7 +23,7 @@ require('dotenv').config({
 
 const routes = require('./routes');
 
-const port = process.env.APP_PORT || process.env.APP_PORT || 3333;
+const port = process.env.PORT || process.env.APP_PORT || 3333;
 const name = process.env.APP_NAME || 'atmonello-omnistack10';
 
 const databaseURL = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}/${process.env.DB_NAME}?retryWrites=true&w=majority`;
