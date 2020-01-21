@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "NODE_ENV=development nodemon src/index.js",
-    "staging": "NODE_ENV=staging node src/index.js"
+    "staging": "NODE_ENV=staging node src/index.js",
+    "deploy:heroku": "cd .. && git subtree push --prefix backend heroku master"
   },
   "dependencies": {
     "axios": "^0.19.1",
