@@ -13,7 +13,7 @@ export default function DevItem({ dev}) {
         </div>
       </header>
       <p>{dev.bio}</p>
-      <a href={`https://github.com/${dev.github_username}`} target="_blank">Acessar perfil no GitHub</a>
+      <a href={`https://github.com/${dev.github_username}`} target="_blank" rel="noopener noreferrer">Acessar perfil no GitHub</a>
     </li>
   );
 }
